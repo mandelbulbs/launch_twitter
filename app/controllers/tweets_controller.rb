@@ -10,7 +10,7 @@ class TweetsController < ApplicationController
 
 		@tweet = Tweet.new(tweet_params)
 		@tweet.save
-		redirect_to new_tweet_path
+		redirect_to new_tweet_pathr
 	end
 
 	def tweet_params

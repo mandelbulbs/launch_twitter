@@ -10,6 +10,8 @@ gem 'sqlite3', '~> 1.4'
 
 #simple form gem
 gem 'simple_form'
+# a gem to help with user management
+gem 'devise'
 
 gem 'strong-parameters'
 
