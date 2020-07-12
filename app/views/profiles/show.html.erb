@@ -1,8 +1,14 @@
-This is your profile page.
-<br>
-</br>
-First Name: <%= @profile.first_name %>
-<br></br>
-Last Name: <%= @profile.last_name %>
-<br></br>
-Age: <%= @profile.age %>
+This is your profile page.<br>
+
+First Name: <%= @profile.first_name %><br>
+Last Name: <%= @profile.last_name %><br>
+Age: <%= @profile.age %><br>
+
+
+
+<% @profile.user.tweets.each do |tweet| %>
+	<ul class="list-group">
+		<li class="list-group-item list-group-item-secondary"><%= tweet.content %></li>
+	</ul>
+<% end %>
+
