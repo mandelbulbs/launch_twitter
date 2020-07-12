@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
 	before_action :authenticate_user!
 
 	def new
+		redirect_to profile_path(current_user.profile) if current_user.profile
 		@profile = Profile.new 
 	end
 
