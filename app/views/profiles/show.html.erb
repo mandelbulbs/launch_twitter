@@ -4,11 +4,11 @@ First Name: <%= @profile.first_name %><br>
 Last Name: <%= @profile.last_name %><br>
 Age: <%= @profile.age %><br>
 
-
-
-<% @profile.user.tweets.each do |tweet| %>
+<% if @profile.user.tweets.any? %>
 	<ul class="list-group">
-		<li class="list-group-item list-group-item-secondary"><%= tweet.content %></li>
+	<% @profile.user.tweets.reverse.each do |tweet| %>
+			<li class="list-group-item list-group-item-secondary"><%= tweet.content %></li>
+			<% end %>
 	</ul>
 <% end %>
 
