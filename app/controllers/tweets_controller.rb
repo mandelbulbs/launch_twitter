@@ -1,7 +1,10 @@
 class TweetsController < ApplicationController
 	def new
 		@tweet = Tweet.new
+		
+
 	end
+
 
 	def create
 		#@tweet = Tweet.new #params["tweet"]
@@ -10,6 +13,7 @@ class TweetsController < ApplicationController
 
 		@tweet = Tweet.new(tweet_params)
 		@tweet.save
+		flash[:success] = "Your tweet was succesfully published!"
 		redirect_to new_tweet_path
 	end
 
