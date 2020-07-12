@@ -1,3 +1,3 @@
 class Tweet < ApplicationRecord
-	validates :content, length: { maximum: 4 }
+	validates :content, length: { maximum: 280 }
 end
